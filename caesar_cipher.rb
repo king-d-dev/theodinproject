@@ -19,4 +19,13 @@ def caesar_cipher(string, shift)
     return result.join
 end
 
-# caesar_cipher "david appohz", 4
+def get_char_map(start, stop)
+    char_map = {}
+    (start..stop).to_a.each { |el| char_map[el] = el.ord }
+    char_map
+end
+
+puts get_char_map "a", "z"
+puts get_char_map "A", "Z"
+
+p caesar_cipher "david appohz", 4
